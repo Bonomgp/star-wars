@@ -20,10 +20,8 @@ export function Details() {
   const path = usePathname();
   const films = useSelector(selectFilms);
   const thisFilm = films.find(film => (
-    film.data.url === `https://swapi.dev/api${path}/`
+    film.data.url === `/api${path}`
   ));
-
-  console.log(thisFilm);
 
   React.useEffect(() => {
     if (!thisFilm?.detailsRetrieved) {

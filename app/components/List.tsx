@@ -30,7 +30,7 @@ export function ListTable() {
         {
           value: film.data.title,
           type: "link",
-          href: `/${path.substring(path.indexOf("films/"), path.lastIndexOf("/"))}`
+          href: `/${path.substring(path.indexOf("films/"))}`
         },
         {
           value: String(film.data.episode_id),

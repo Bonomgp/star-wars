@@ -60,6 +60,15 @@ export type FilmResponseWithFlag = {
   data: FilmResponse;
 }
 
+export type NodeFilmResponseWithFlag = {
+  detailsRetrieved: boolean;
+  data: NodeFilmResponse;
+}
+
+export type NodeFilmResponse = {
+  fields: FilmResponse;
+}
+
 export type FilmResponse = {
   title: string;
   episode_id: number;
@@ -77,12 +86,23 @@ export type FilmResponse = {
   url: string;
 };
 
+export type NodeFilmsResponse = {
+  count: number;
+  next: number | null;
+  previous: number | null;
+  results: NodeFilmResponse[];
+}
+
 export type FilmsResponse = {
   count: number;
   next: number | null;
-  previos: number | null;
+  previous: number | null;
   results: FilmResponse[];
 };
+
+export type NodeCharactersResponse = {
+  fields: CharactersResponse;
+}
 
 export type CharactersResponse = {
   name: string;
@@ -103,6 +123,10 @@ export type CharactersResponse = {
   url: string;
 };
 
+export type NodePlanetsResponse = {
+  fields: PlanetsResponse;
+}
+
 export type PlanetsResponse = {
   name: string;
   rotation_period: string;
@@ -119,6 +143,10 @@ export type PlanetsResponse = {
   edited: string;
   url: string;
 };
+
+export type NodeStarshipsResponse = {
+  fields: StarshipsResponse;
+}
 
 export type StarshipsResponse = {
   name: string;
@@ -141,6 +169,10 @@ export type StarshipsResponse = {
   url: string;
 };
 
+export type NodeVehiclesResponse = {
+  fields: VehiclesResponse;
+}
+
 export type VehiclesResponse = {
   name: string;
   model: string;
@@ -159,6 +191,10 @@ export type VehiclesResponse = {
   edited: string;
   url: string;
 };
+
+export type NodeSpeciesResponse = {
+  fields: SpeciesResponse;
+}
 
 export type SpeciesResponse = {
   name: string;
